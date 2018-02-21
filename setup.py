@@ -1,4 +1,4 @@
-"""Packaging settings."""
+cttemplate"""Packaging settings."""
 
 
 from codecs import open
@@ -7,7 +7,7 @@ from subprocess import call
 
 from setuptools import Command, find_packages, setup
 
-from skele import __version__
+from cttemplate import __version__
 
 
 this_dir = abspath(dirname(__file__))
@@ -28,19 +28,19 @@ class RunTests(Command):
 
     def run(self):
         """Run all tests!"""
-        errno = call(['py.test', '--cov=skele', '--cov-report=term-missing'])
+        errno = call(['py.test', '--cov=cttemplate', '--cov-report=term-missing'])
         raise SystemExit(errno)
 
 
 setup(
-    name = 'skele',
+    name = 'cttemplate',
     version = __version__,
-    description = 'A skeleton command line program in Python.',
+    description = 'A template for Control Things tools in Python.',
     long_description = long_description,
-    url = 'https://github.com/rdegges/skele-cli',
-    author = 'Randall Degges',
-    author_email = 'r@rdegges.com',
-    license = 'UNLICENSE',
+    url = 'https://github.com/ControlThingsTools/cttemplate.git',
+    author = 'Justin Searle',
+    author_email = 'justin@meeas.com',
+    license = 'GPLv3',
     classifiers = [
         'Intended Audience :: Developers',
         'Topic :: Utilities',
@@ -63,7 +63,7 @@ setup(
     },
     entry_points = {
         'console_scripts': [
-            'skele=skele.cli:main',
+            'cttemplate=cttemplate.cli:main',
         ],
     },
     cmdclass = {'test': RunTests},

@@ -1,23 +1,17 @@
-skele-cli
+cttemplate
 =========
 
-*A skeleton command line program in Python.*
+*A Control Things template for building command line tools in python*
 
 
 Purpose
 -------
 
 This is a skeleton application which demonstrates how to properly structure a
-Python CLI application.
+ct??? command line tool.
 
-I've done my best to structure this in a way that makes sense for *most* users,
-but if you have any feedback, please open a Github issue and I'll take a look.
-
-The idea with this project is that you should be able to use this as a template
-for building new CLI apps.
-
-You can fork this project and customize it to your liking, or just use it as a
-reference.
+For a breakdown of the different parts of this skel project, see this
+`blog https://stormpath.com/blog/building-simple-cli-interfaces-in-python`
 
 
 Usage
